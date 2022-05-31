@@ -6,7 +6,7 @@ package cardtrickice1;
 /** define card value and suits
  * 
  *
- * @author Svayam Modi
+ * @author Svayam-Modi
  */
 public class Card 
 {
@@ -45,7 +45,7 @@ public class Card
     
     public static int RandomValue()
     {
-        return  (int) ((Math.random()*13)+1);
+        return  (int) ((Math.random()*12)+1);
     }
     //method for suits
        public static String RandomSuit()
