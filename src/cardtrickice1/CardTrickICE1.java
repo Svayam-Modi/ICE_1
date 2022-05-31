@@ -30,10 +30,14 @@ public class CardTrickICE1 {
             
         }
         
-        System.out.println("Enter the card number");
+        System.out.println("Enter the card number (1 to 12)");
         int num = kb.nextInt();
-        System.out.println("Enter the card suits");
-        String suit = kb.next();
+        System.out.println("Choose the card suits: ");
+        System.out.println("1:hearts\n2:diamonds\n3:spades\n4:clubs");
+        int suitnum = kb.nextInt();
+        String suit;
+        suit = CallSuit(suitnum);
+        
         boolean match = true ;
         for(int i =0; i < magicHand.length;i++)
         {
@@ -55,5 +59,30 @@ public class CardTrickICE1 {
             System.out.println("Card not found");
         }
     }
+    public static String CallSuit(int a)
+    {
+        String suit= "";
+        int b =a;
+        switch(b)
+        {
+            case 1:
+            suit= "hearts";
+            break;
+            
+            case 2:
+            suit = "diamonds";
+            break ;
+            
+            case 3:
+            suit ="spades";
+            break;
+            
+            case 4:
+            suit = "clubs";
+            break;
+        
+        }
+        return suit;
     
+    }
 }
